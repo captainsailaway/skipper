@@ -694,9 +694,12 @@
     document.getElementById("nextBtn").addEventListener("click", ()=>{ next(); restart(); });
     document.getElementById("prevBtn").addEventListener("click", ()=>{ prev(); restart(); });
 
-    renderDots();
-    go(0);
-    restart();
+   window.addEventListener("load", () => {
+  idx = 0;
+  renderDots();
+  go(0);
+  restart();
+});
 
     // Date validation
     const s = document.getElementById("dateStart");

@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Adriatic Skipper Croatia | Weekly Yacht Charter from Šibenik</title>
+  <meta name="description" content="Affordable weekly skippered yacht charters from Šibenik, Croatia. English-speaking local skipper organizing yacht rental and sailing routes between Zadar and Split." />
+  <link rel="canonical" href="https://captainsailaway.github.io/adriatic-skipper/" />
+  <meta name="theme-color" content="#0b2a3a" />
+
+  <!-- Google Search Console: paste your verification code value below -->
+  <meta name="google-site-verification" content="PASTE_YOUR_CODE_HERE" />
+
+  <!-- Favicon (no extra files needed) -->
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" font-size="90">⛵</text></svg>' />
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Adriatic Skipper Croatia",
+    "url": "https://captainsailaway.github.io/adriatic-skipper/",
+    "email": "captain.sailaway.hr@gmail.com",
+    "description": "Affordable weekly skippered yacht charters from Šibenik, Croatia. English-speaking local skipper organizing yacht rental and sailing routes between Zadar and Split.",
+    "knowsLanguage": ["en", "hr"],
+    "areaServed": [
+      {"@type":"AdministrativeArea","name":"Šibenik-Knin County"},
+      {"@type":"AdministrativeArea","name":"Zadar County"},
+      {"@type":"AdministrativeArea","name":"Split-Dalmatia County"}
+    ],
+    "founder": {"@type":"Person","name":"Alen"},
+    "makesOffer": [{
+      "@type":"Offer",
+      "itemOffered":{
+        "@type":"Service",
+        "name":"Weekly skippered yacht charter",
+        "serviceType":"Skipper services",
+        "areaServed":"Croatia"
+      }
+    }]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#071a23;
+      --card:#0b2a3a;
+      --muted:#9cc0d3;
+      --text:#eaf6ff;
+      --accent:#38bdf8;
+      --accent2:#22c55e;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 18px 45px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1120px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(56,189,248,.25), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(34,197,94,.18), transparent 55%),
+        linear-gradient(180deg, var(--bg), #041018);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    .nav{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(4,16,24,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .navin{display:flex; align-items:center; justify-content:space-between; padding:12px 0; gap:12px}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(56,189,248,.95), rgba(34,197,94,.85));
+      box-shadow: var(--shadow);
+      display:grid; place-items:center;
+      font-weight:900; color:#04212d;
+    }
+    .sub{font-size:12px; color: rgba(156,192,211,.92); font-weight:650; margin-top:2px}
+    .navlinks{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end; align-items:center}
+    .navlinks a{
+      padding:9px 10px; border-radius:12px;
+      color:rgba(234,246,255,.88);
+      border:1px solid transparent;
+      font-weight:700;
+    }
+    .navlinks a:hover{border-color:var(--line); background:rgba(255,255,255,.04)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 14px; border-radius:14px;
+      border:1px solid rgba(56,189,248,.35);
+      background: rgba(56,189,248,.14);
+      color:var(--text); font-weight:800;
+      transition: transform .12s ease, background .12s ease;
+      cursor:pointer;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(56,189,248,.20)}
+    .btn.primary{
+      border-color: rgba(34,197,94,.45);
+      background: rgba(34,197,94,.16);
+    }
+    .btn.primary:hover{background: rgba(34,197,94,.22)}
+    .btn.ghost{
+      border-color: var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .btn.ghost:hover{background: rgba(255,255,255,.06)}
+
+    .hero{padding:56px 0 18px;}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr;}
+      .navlinks{display:none}
+    }
+    .card{
+      background: rgba(11,42,58,.62);
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      overflow:hidden;
+    }
+    .heroCard{padding:22px;}
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: rgba(234,246,255,.92);
+      font-weight:700;
+      width: fit-content;
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height:1.08;
+      letter-spacing:-.6px;
+    }
+    .lead{
+      font-size: clamp(16px, 2vw, 18px);
+      color: rgba(234,246,255,.86);
+      max-width: 65ch;
+      margin: 0 0 14px;
+    }
+    .heroActions{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+    .mini{
+      color: rgba(156,192,211,.95);
+      margin-top: 14px;
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size: 14px;
+      font-weight:650;
+    }
+    .mini span{display:inline-flex; gap:8px; align-items:center}
+
+    /* Slider */
+    .slider{
+      position:relative;
+      border-radius: var(--radius);
+      overflow:hidden;
+      min-height: 360px;
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .slides{
+      display:flex;
+      width:100%;
+      height:100%;
+      transition: transform .5s ease;
+    }
+    .slide{
+      min-width:100%;
+      height: 360px;
+      background-size: cover;
+      background-position:center;
+      position:relative;
+    }
+    .slide::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(4,16,24,.10), rgba(4,16,24,.55));
+    }
+    .sliderControls{
+      position:absolute;
+      inset:auto 12px 12px 12px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      z-index:2;
+    }
+    .dots{display:flex; gap:8px; align-items:center; justify-content:center; flex:1}
+    .dot{
+      width:9px; height:9px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.35);
+      background: rgba(255,255,255,.10);
+      cursor:pointer;
+    }
+    .dot.active{background: rgba(34,197,94,.45); border-color: rgba(34,197,94,.65)}
+    .iconBtn{
+      width:42px; height:42px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(4,16,24,.45);
+      color: var(--text);
+      display:grid; place-items:center;
+      cursor:pointer;
+      font-size:18px;
+      font-weight:900;
+    }
+    .iconBtn:hover{background: rgba(255,255,255,.06)}
+
+    section{padding:26px 0}
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin-bottom:12px;
+    }
+    .sectionTitle h2{margin:0; font-size:22px}
+    .sectionTitle p{margin:0; color:var(--muted); max-width:70ch}
+
+    .cards{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px;}
+    @media (max-width: 920px){ .cards{grid-template-columns:1fr} }
+
+    .item{
+      padding:16px;
+      border-radius: 18px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      min-height: 120px;
+    }
+    .item h3{margin:0 0 6px; font-size:16px}
+    .item p{margin:0; color: rgba(234,246,255,.82); font-size:14px}
+
+    .split{display:grid; grid-template-columns: 1fr 1fr; gap:14px; align-items:start;}
+    @media (max-width: 920px){ .split{grid-template-columns:1fr} }
+
+    .list{
+      padding:16px;
+      border-radius: 18px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .list ul{margin:10px 0 0; padding-left:18px; color: rgba(234,246,255,.82)}
+    .list li{margin:8px 0}
+
+    .route{display:grid; gap:10px;}
+    .day{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:12px; border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .badge{
+      width:34px; height:34px; border-radius:12px;
+      display:grid; place-items:center;
+      background: rgba(56,189,248,.16);
+      border:1px solid rgba(56,189,248,.25);
+      font-weight:900;
+    }
+    .day b{display:block}
+    .muted{color:var(--muted)}
+
+    .faq details{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:12px 14px;
+      margin:10px 0;
+    }
+    .faq summary{cursor:pointer; font-weight:900}
+    .faq p{margin:8px 0 0; color: rgba(234,246,255,.82); font-size:14px}
+
+    .contact{padding:18px;}
+    form{display:grid; gap:10px; margin-top:10px}
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(4,16,24,.40);
+      color:var(--text);
+      outline:none;
+    }
+    input[type="date"]{color-scheme: dark;}
+    textarea{min-height:120px; resize:vertical}
+    .smallnote{font-size:12px; color: rgba(156,192,211,.9)}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;}
+
+    .footer{
+      padding:22px 0 34px;
+      border-top:1px solid var(--line);
+      color: rgba(156,192,211,.92);
+      font-size: 14px;
+    }
+
+    .toast{
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 16px;
+      background: rgba(4,16,24,.78);
+      border:1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow);
+      display:none;
+      z-index:80;
+      max-width: min(520px, calc(100% - 24px));
+    }
+  </style>
+</head>
+
+<body>
+  <header class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#top" aria-label="Home">
+        <div class="logo">A</div>
+        <div>
+          <div>Adriatic Skipper Croatia</div>
+          <div class="sub">Zadar • Šibenik • Split</div>
+        </div>
+      </a>
+
+      <nav class="navlinks" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#routes">Routes</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn">Request offer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="grid">
+        <div class="card heroCard">
+          <div class="pill">⛵ Affordable weekly charters • English speaking • Local routes</div>
+
+          <h1>Weekly Skippered Yacht Charter from Šibenik, Croatia</h1>
+
+          <p class="lead">
+            I help you <b>organize the yacht</b> (via trusted charter partners), plan a great route, and enjoy a relaxed sailing week
+            between <b>Zadar – Šibenik – Split</b>.
+          </p>
+
+          <div class="heroActions">
+            <a class="btn primary" href="#contact">Request your custom offer</a>
+            <a class="btn ghost" href="#routes">See sample routes</a>
+          </div>
+
+          <div class="mini">
+            <span>✅ Local knowledge</span>
+            <span>✅ Fair pricing</span>
+            <span>✅ Flexible itinerary</span>
+            <span>✅ Safety-first</span>
+          </div>
+
+          <div style="margin-top:12px" class="smallnote">
+            HR: Pošalji upit i javim se na email s ponudom brodova i prijedlogom rute.
+          </div>
+        </div>
+
+        <div class="slider" aria-label="Photo slider">
+          <div class="slides" id="slides">
+            <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=70');"></div>
+            <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=70');"></div>
+            <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1600&q=70');"></div>
+            <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=70');"></div>
+          </div>
+
+          <div class="sliderControls">
+            <button class="iconBtn" id="prevBtn" type="button" aria-label="Previous">‹</button>
+            <div class="dots" id="dots" aria-label="Slide dots"></div>
+            <button class="iconBtn" id="nextBtn" type="button" aria-label="Next">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="sectionTitle">
+        <h2>About</h2>
+        <p>Trust matters — here’s who you’re sailing with.</p>
+      </div>
+
+      <div class="split">
+        <div class="list">
+          <h3>Hi, I’m Alen.</h3>
+          <p class="muted" style="margin:8px 0 0;">
+            I organize relaxed, budget-friendly weekly sailing trips along the Adriatic — most weeks starting from Šibenik,
+            with routes between Zadar and Split.
+          </p>
+          <p class="muted" style="margin:10px 0 0;">
+            My focus is simple: clear communication in English, safe sailing, flexible routes, and a friendly vibe onboard.
+          </p>
+          <p class="smallnote" style="margin-top:10px;">
+            Send your dates and crew size — I’ll suggest yacht options and a route that fits your budget and style.
+          </p>
+        </div>
+
+        <aside class="list">
+          <h3>Fast contact</h3>
+          <p style="margin:8px 0 0;">
+            Email: <span class="mono" id="emailText">captain.sailaway.hr@gmail.com</span><br/>
+            <span class="smallnote">After you send the form, I’ll reply by email.</span>
+          </p>
+          <div style="height:10px"></div>
+          <h3>Quick info</h3>
+          <div class="split" style="grid-template-columns:1fr 1fr; margin-top:10px">
+            <div class="item" style="min-height:auto">
+              <div class="muted">Region</div>
+              <b>Šibenik focus</b>
+              <div class="smallnote">Kornati + Mid Dalmatia</div>
+            </div>
+            <div class="item" style="min-height:auto">
+              <div class="muted">Trip</div>
+              <b>7 days</b>
+              <div class="smallnote">Sat–Sat typical</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="sectionTitle">
+        <h2>Services</h2>
+        <p>Simple, transparent, and focused on a smooth week at sea.</p>
+      </div>
+
+      <div class="cards">
+        <div class="item">
+          <h3>Weekly skippered charters</h3>
+          <p>7-day sailing weeks with flexible daily plans.</p>
+        </div>
+        <div class="item">
+          <h3>Help choosing the yacht</h3>
+          <p>I suggest options from charter partners that match your budget (sailboat / catamaran).</p>
+        </div>
+        <div class="item">
+          <h3>Route planning (Zadar–Split)</h3>
+          <p>Kornati, Šibenik archipelago, Primošten, Trogir — based on weather and your vibe.</p>
+        </div>
+        <div class="item">
+          <h3>Local recommendations</h3>
+          <p>Swim spots, konobas, marinas — practical and authentic.</p>
+        </div>
+        <div class="item">
+          <h3>Budget-friendly approach</h3>
+          <p>Fair skipper fee and smart choices to keep costs under control.</p>
+        </div>
+        <div class="item">
+          <h3>English communication</h3>
+          <p>Clear planning and fast replies for international guests.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="routes">
+      <div class="sectionTitle">
+        <h2>Sample routes</h2>
+        <p>Examples only — final route depends on wind, marina availability, and your preferences.</p>
+      </div>
+
+      <div class="split">
+        <div class="list">
+          <h3>7 days from Šibenik (Kornati focus)</h3>
+          <div class="route">
+            <div class="day"><div class="badge">1</div><div><b>Šibenik</b><div class="muted">Arrival, check-in, easy evening</div></div></div>
+            <div class="day"><div class="badge">2</div><div><b>Zlarin / Kaprije</b><div class="muted">Short sail + swim</div></div></div>
+            <div class="day"><div class="badge">3</div><div><b>Kornati</b><div class="muted">Iconic islands, crystal water</div></div></div>
+            <div class="day"><div class="badge">4</div><div><b>Žirje</b><div class="muted">Quiet bays, relaxed day</div></div></div>
+            <div class="day"><div class="badge">5</div><div><b>Primošten</b><div class="muted">Old town + sunset</div></div></div>
+            <div class="day"><div class="badge">6</div><div><b>Trogir (optional)</b><div class="muted">If you want a busier vibe</div></div></div>
+            <div class="day"><div class="badge">7</div><div><b>Back to Šibenik</b><div class="muted">Check-out</div></div></div>
+          </div>
+        </div>
+
+        <div class="list">
+          <h3>7 days from Zadar (north route)</h3>
+          <div class="route">
+            <div class="day"><div class="badge">1</div><div><b>Zadar</b><div class="muted">Arrival + old town walk</div></div></div>
+            <div class="day"><div class="badge">2</div><div><b>Ugljan / Pašman</b><div class="muted">Easy start</div></div></div>
+            <div class="day"><div class="badge">3</div><div><b>Dugi Otok</b><div class="muted">Cliffs + bays</div></div></div>
+            <div class="day"><div class="badge">4</div><div><b>Kornati</b><div class="muted">National park day</div></div></div>
+            <div class="day"><div class="badge">5</div><div><b>Vrgada area</b><div class="muted">Swim + chill</div></div></div>
+            <div class="day"><div class="badge">6</div><div><b>Biograd / Sukošan</b><div class="muted">Marina night</div></div></div>
+            <div class="day"><div class="badge">7</div><div><b>Back to Zadar</b><div class="muted">Check-out</div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="sectionTitle">
+        <h2>Pricing</h2>
+        <p>Yacht price depends on season/type. Skipper fee is transparent.</p>
+      </div>
+
+      <div class="split">
+        <div class="list">
+          <h3>Skipper fee</h3>
+          <p style="margin:8px 0 0; font-size:18px;"><b>From €1,000–€1,200 / week</b></p>
+          <p class="muted" style="margin:8px 0 0;">Final price depends on dates and start marina.</p>
+          <p class="smallnote" style="margin-top:10px;">Typical weekly charters are Sat–Sat. Ask for your dates and crew size.</p>
+        </div>
+
+        <div class="list">
+          <h3>What’s included</h3>
+          <ul>
+            <li>Skipper services for the week</li>
+            <li>Route plan + daily adjustments to weather</li>
+            <li>Help selecting/organizing the charter yacht</li>
+            <li>Local recommendations + easy communication</li>
+          </ul>
+          <p class="smallnote" style="margin-top:10px;">Not included: yacht charter cost, fuel, marina fees, food, tourist taxes (varies by charter/marina).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="sectionTitle">
+        <h2>FAQ</h2>
+        <p>Quick answers guests usually ask.</p>
+      </div>
+
+      <details>
+        <summary>Do we need sailing experience?</summary>
+        <p>No. Guests don’t need experience. You enjoy the trip; I handle the boat.</p>
+      </details>
+      <details>
+        <summary>Can you help us book the yacht?</summary>
+        <p>Yes — I can suggest suitable options from charter partners and help you choose the best one for your budget.</p>
+      </details>
+      <details>
+        <summary>Where should we start?</summary>
+        <p>Šibenik is great for Kornati. Zadar is perfect for a northern route. Split is best for Hvar/Vis (southern route).</p>
+      </details>
+      <details>
+        <summary>What if the weather is bad?</summary>
+        <p>We adjust the route and choose safer legs and protected bays. Safety always comes first.</p>
+      </details>
+    </section>
+
+    <section id="contact">
+      <div class="card contact">
+        <div class="sectionTitle" style="margin-bottom:6px;">
+          <h2>Request your offer</h2>
+          <p>Send the form and I’ll reply by email with yacht options + a suggested route.</p>
+        </div>
+
+        <!-- Formspree: replace YOUR_FORM_ID with your real form id (e.g. https://formspree.io/f/abcdwxyz) -->
+        <form id="requestForm" action="https://formspree.io/f/meelyqzl" method="POST">
+          <input type="hidden" name="_subject" value="Weekly Skipper Request (Website)" />
+
+          <div class="split">
+            <div>
+              <label class="smallnote" for="name">Name</label>
+              <input id="name" name="name" autocomplete="name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label class="smallnote" for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="split">
+            <div>
+              <label class="smallnote" for="dateStart">Start date</label>
+              <input id="dateStart" name="start_date" type="date" required />
+            </div>
+            <div>
+              <label class="smallnote" for="dateEnd">End date</label>
+              <input id="dateEnd" name="end_date" type="date" required />
+            </div>
+          </div>
+
+          <div class="split">
+            <div>
+              <label class="smallnote" for="crew">Crew size</label>
+              <select id="crew" name="crew_size" required>
+                <option value="">Select…</option>
+                <option>2</option><option>3</option><option>4</option><option>5</option>
+                <option>6</option><option>7</option><option>8</option><option>9+</option>
+              </select>
+            </div>
+            <div>
+              <label class="smallnote" for="start">Preferred start</label>
+              <select id="start" name="preferred_start" required>
+                <option value="">Select…</option>
+                <option>Šibenik area</option>
+                <option>Zadar area</option>
+                <option>Split area</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="split">
+            <div>
+              <label class="smallnote" for="budget">Budget range (optional)</label>
+              <input id="budget" name="budget_range" placeholder="e.g. €3,000–€5,000 for the yacht" />
+            </div>
+            <div>
+              <label class="smallnote" for="style">Trip style (optional)</label>
+              <select id="style" name="trip_style">
+                <option value="">Select…</option>
+                <option>Quiet bays & swimming</option>
+                <option>Balanced</option>
+                <option>Towns & restaurants</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="smallnote" for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me what you prefer: calm bays vs nightlife, more sailing vs more swimming, must-see places…"></textarea>
+          </div>
+
+          <div class="split" style="align-items:center;">
+            <button type="submit" class="btn primary">Send request</button>
+            <div class="smallnote">No email app opens. The form sends directly via Formspree.</div>
+          </div>
+</form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap" style="padding:0">
+        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:space-between; align-items:center;">
+          <div>© <span id="year"></span> Adriatic Skipper Croatia • Šibenik (Zadar–Split)</div>
+          <div class="smallnote">SEO-ready: canonical + schema + favicon + Search Console meta placeholder.</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const CONTACT_EMAIL = "captain.sailaway.hr@gmail.com";
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("emailText").textContent = CONTACT_EMAIL;
+
+    // Slider logic
+    const slidesEl = document.getElementById("slides");
+    const total = slidesEl.children.length;
+    const dotsEl = document.getElementById("dots");
+    let idx = 0;
+    let timer = null;
+
+    function renderDots(){
+      dotsEl.innerHTML = "";
+      for(let i=0;i<total;i++){
+        const d = document.createElement("button");
+        d.type = "button";
+        d.className = "dot" + (i===idx ? " active" : "");
+        d.setAttribute("aria-label", "Go to slide " + (i+1));
+        d.addEventListener("click", ()=>{ go(i); restart(); });
+        dotsEl.appendChild(d);
+      }
+    }
+    function go(i){
+      idx = (i + total) % total;
+      slidesEl.style.transform = "translateX(" + (-idx*100) + "%)";
+      [...dotsEl.children].forEach((d,di)=> d.classList.toggle("active", di===idx));
+    }
+    function next(){ go(idx+1); }
+    function prev(){ go(idx-1); }
+    function restart(){
+      if(timer) clearInterval(timer);
+      timer = setInterval(next, 5000);
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", ()=>{ next(); restart(); });
+    document.getElementById("prevBtn").addEventListener("click", ()=>{ prev(); restart(); });
+
+    renderDots();
+    go(0);
+    restart();
+
+    // Date validation
+    const s = document.getElementById("dateStart");
+    const e = document.getElementById("dateEnd");
+    function ensureOrder(){
+      if(s.value && e.value && e.value < s.value){
+        e.value = s.value;
+      }
+      if(s.value){
+        e.min = s.value;
+      }
+    }
+    s.addEventListener("change", ensureOrder);
+    e.addEventListener("change", ensureOrder);
+
+    // Formspree: show a nice message without leaving the page
+    const form = document.getElementById("requestForm");
+    const toast = document.getElementById("toast");
+
+    function showToast(msg){
+      toast.textContent = msg;
+      toast.style.display = "block";
+      setTimeout(()=> toast.style.display="none", 6000);
+    }
+
+    form.addEventListener("submit", async (ev)=>{
+      ev.preventDefault();
+
+      // Prevent accidental deploy with placeholder
+      if(form.action.includes("YOUR_FORM_ID")){
+        showToast("Setup needed: replace YOUR_FORM_ID in the form action with your Formspree form ID.");
+        return;
+      }
+
+      try{
+        const data = new FormData(form);
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: { "Accept": "application/json" }
+        });
+
+        if(res.ok){
+          form.reset();
+          showToast("Thanks! Your request was sent. I’ll reply by email soon.");
+        }else{
+          showToast("Something went wrong. Please try again or email: " + CONTACT_EMAIL);
+        }
+      }catch(err){
+        showToast("Network error. Please try again or email: " + CONTACT_EMAIL);
+      }
+    });
+  </script>
+</body>
+</html>

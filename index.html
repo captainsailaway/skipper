@@ -662,45 +662,81 @@
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("emailText").textContent = CONTACT_EMAIL;
 
-    // Slider logic
-    const slidesEl = document.getElementById("slides");
-    const total = slidesEl.children.length;
-    const dotsEl = document.getElementById("dots");
-    let idx = 0;
-    let timer = null;
+   // Slider logic (robust: px-based + resize-safe)
+const slidesEl = document.getElementById("slides");
+const dotsEl = document.getElementById("dots");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
 
-    function renderDots(){
-      dotsEl.innerHTML = "";
-      for(let i=0;i<total;i++){
-        const d = document.createElement("button");
-        d.type = "button";
-        d.className = "dot" + (i===idx ? " active" : "");
-        d.setAttribute("aria-label", "Go to slide " + (i+1));
-        d.addEventListener("click", ()=>{ go(i); restart(); });
-        dotsEl.appendChild(d);
-      }
-    }
-    function go(i){
-      idx = (i + total) % total;
-      slidesEl.style.transform = "translateX(" + (-idx*100) + "%)";
-      [...dotsEl.children].forEach((d,di)=> d.classList.toggle("active", di===idx));
-    }
-    function next(){ go(idx+1); }
-    function prev(){ go(idx-1); }
-    function restart(){
-      if(timer) clearInterval(timer);
-      timer = setInterval(next, 5000);
-    }
+let idx = 0;
+let timer = null;
 
-    document.getElementById("nextBtn").addEventListener("click", ()=>{ next(); restart(); });
-    document.getElementById("prevBtn").addEventListener("click", ()=>{ prev(); restart(); });
+function totalSlides() {
+  return slidesEl ? slidesEl.children.length : 0;
+}
 
-   window.addEventListener("load", () => {
+function slideWidth() {
+  // slider container width, not slide width
+  const slider = slidesEl?.closest(".slider");
+  return slider ? slider.getBoundingClientRect().width : 0;
+}
+
+function renderDots() {
+  if (!dotsEl) return;
+  dotsEl.innerHTML = "";
+  const total = totalSlides();
+
+  for (let i = 0; i < total; i++) {
+    const d = document.createElement("button");
+    d.type = "button";
+    d.className = "dot" + (i === idx ? " active" : "");
+    d.setAttribute("aria-label", "Go to slide " + (i + 1));
+    d.addEventListener("click", () => { go(i); restart(); });
+    dotsEl.appendChild(d);
+  }
+}
+
+function applyTransform() {
+  const w = slideWidth();
+  if (!w) return;
+  slidesEl.style.transform = `translateX(${-idx * w}px)`;
+  if (dotsEl) [...dotsEl.children].forEach((d, di) => d.classList.toggle("active", di === idx));
+}
+
+function go(i) {
+  const total = totalSlides();
+  if (!total) return;
+  idx = (i + total) % total;
+  applyTransform();
+}
+
+function next() { go(idx + 1); }
+function prev() { go(idx - 1); }
+
+function restart() {
+  if (timer) clearInterval(timer);
+  timer = setInterval(next, 5000);
+}
+
+function initSlider() {
+  if (!slidesEl) return;
+  // Ensure slides are laid out correctly
+  slidesEl.style.width = `${totalSlides() * 100}%`;
+  [...slidesEl.children].forEach((child) => {
+    child.style.flex = "0 0 100%";
+  });
+
   idx = 0;
   renderDots();
-  go(0);
+  applyTransform();
   restart();
-});
+}
+
+window.addEventListener("load", initSlider);
+window.addEventListener("resize", applyTransform);
+
+prevBtn?.addEventListener("click", () => { prev(); restart(); });
+nextBtn?.addEventListener("click", () => { next(); restart(); });
 
     // Date validation
     const s = document.getElementById("dateStart");
